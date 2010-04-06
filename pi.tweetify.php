@@ -12,6 +12,9 @@ inspired by (and pretty much directly ripped from) the Javascript "ify" version
 by Dustin Diaz
 >> http://www.dustindiaz.com/basement/ify.html
 
+also uses John Gruber's URL-matching regex
+>> http://daringfireball.net/2009/11/liberal_regex_for_matching_urls
+
 email Michael with questions, feedback, suggestions, bugs, etc.
 >> michael@michaelrog.com
 
@@ -139,4 +142,4 @@ var $return_data = "";
 } // END Tweetify class
 
 /* End of file pi.tweetify.php */ 
-/* Location: ./system/expressionengine/third_party/dont/pi.tweetify.php */
+/* Location: ./system/expressionengine/third_party/tweetify/pi.tweetify.php */
