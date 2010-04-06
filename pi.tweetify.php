@@ -6,7 +6,7 @@
 RogEE "Tweetify"
 a plug-in for ExpressionEngine 2
 by Michael Rog
-v2.2
+v2.3
 
 inspired by (and pretty much directly ripped from) the Javascript "ify" version
 by Dustin Diaz
@@ -23,7 +23,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 $plugin_info = array(
 						'pi_name'			=> 'RogEE Tweetify',
-						'pi_version'		=> '2.2',
+						'pi_version'		=> '2.3',
 						'pi_author'			=> 'Michael Rog',
 						'pi_author_url'		=> 'http://michaelrog.com/go/ee',
 						'pi_description'	=> 'Formats @shoutouts, #hashtags, and URLs as links, a la Twitter.',
@@ -51,25 +51,27 @@ var $return_data = "";
 
  function url($str_url = '')
   {
-  
-	if ($str_url == '')
+  	
+  	if ($str_url == '')
     {
       $str_url = $this->EE->TMPL->tagdata;
     }
-
-	$in=array(
-        '`((?:https?|ftp)://\S+[[:alnum:]]/?)`si',
-        '`((?<!//)(www\.\S+[[:alnum:]]/?))`si'
+  	
+  	$in=array(
+        '`(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))`si'
         );
         
 	$out=array(
-        '<a href="$1" rel=nofollow>$1</a> ',
-        '<a href="http://$1" rel=\'nofollow\'>$1</a>'
+        '<a href="$1" rel=\"nofollow\">$1</a>'
         );
-
-	return preg_replace($in,$out,$str_url);
+        
+    $links = preg_replace('`(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))`si', '<a href="$1" rel=\"nofollow\">$1</a>', $str_url);    
+	
+	return preg_replace('[href=\"www.]','href="http://www.',$links) ;
+	// return preg_replace($in,$out,$str_url);
 
   }
+  
   
  function at($str_user = '')
   {
@@ -136,5 +138,5 @@ var $return_data = "";
 
 } // END Tweetify class
 
-/* End of file pi.dont.php */ 
-/* Location: ./system/expressionengine/third_party/dont/pi.dont.php */
+/* End of file pi.tweetify.php */ 
+/* Location: ./system/expressionengine/third_party/dont/pi.tweetify.php */
