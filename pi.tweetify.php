@@ -6,7 +6,7 @@
 RogEE "Tweetify"
 a plug-in for ExpressionEngine 2
 by Michael Rog
-v2.5
+v2.6
 
 inspired by (and pretty much directly ripped from) the Javascript "ify" version
 by Dustin Diaz
@@ -26,6 +26,7 @@ changelog:
 2.3 - using John Gruber's URL-matching regex (fixed a lot of URL corner cases)
 2.4 - added CSS class parameters
 2.5 - added support for NSM Addon Updater (http://github.com/newism/nsm.addon_updater.ee_addon)
+2.6 - class attribute only added to code if class parameters are provided
 
 =====================================================
 
@@ -35,7 +36,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 $plugin_info = array(
 						'pi_name'			=> 'RogEE Tweetify',
-						'pi_version'		=> '2.5',
+						'pi_version'		=> '2.6',
 						'pi_author'			=> 'Michael Rog',
 						'pi_author_url'		=> 'http://michaelrog.com/go/ee',
 						'pi_description'	=> 'Formats @shoutouts, #hashtags, and URLs as links, a la Twitter.',
@@ -82,10 +83,13 @@ var $return_data = "";
         break;
     case (!empty($this->css)) :
         $classString = trim($this->css);
-        break;        
+        break;
+    default:
+    	$classString = "" ;
+    	break ;        
     }
         
-    $links = preg_replace('`(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))`si', '<a href="$1" class="'.$classString.'" rel=\"nofollow\">$1</a>', $str_url);    
+    $links = preg_replace('`(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))`si', '<a href="$1"'.(empty($classString)?"":' class="'.$classString.'"').' rel=\"nofollow\">$1</a>', $str_url);    
 	
 	return preg_replace('[href=\"www.]','href="http://www.',$links);
 
@@ -112,9 +116,12 @@ var $return_data = "";
     case (!empty($this->css)) :
         $classString = trim($this->css);
         break;        
+    default:
+    	$classString = "" ;
+    	break ; 
     }
 	
-	return preg_replace("#(^|[\n ])@([^ \"\t\n\r<]*)#ise", "'\\1<a href=\"http://www.twitter.com/\\2\" class=\"".$classString."\">@\\2</a>'", $str_user);
+	return preg_replace("#(^|[\n ])@([^ \"\t\n\r<]*)#ise", "'\\1<a href=\"http://www.twitter.com/\\2\"".(empty($classString)?"":' class="'.$classString.'"').">@\\2</a>'", $str_user);
 
   }
 
@@ -138,9 +145,12 @@ var $return_data = "";
     case (!empty($this->css)) :
         $classString = trim($this->css);
         break;        
+    default:
+    	$classString = "" ;
+    	break ; 
     }
 
-	return preg_replace("#(^|[\n ])\#([^ \"\t\n\r<]*)#ise", "'\\1<a href=\"http://twitter.com/search?q=%23\\2\" class=\"".$classString."\">#\\2</a>'", $str_tag);
+	return preg_replace("#(^|[\n ])\#([^ \"\t\n\r<]*)#ise", "'\\1<a href=\"http://twitter.com/search?q=%23\\2\"".(empty($classString)?"":' class="'.$classString.'"').">#\\2</a>'", $str_tag);
 
   }
 
