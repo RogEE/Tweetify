@@ -6,7 +6,7 @@
 RogEE "Tweetify"
 a plug-in for ExpressionEngine 2
 by Michael Rog
-v2.6.1
+v2.7
 
 inspired by (and pretty much directly ripped from) the Javascript "ify" version
 by Dustin Diaz
@@ -27,6 +27,7 @@ changelog:
 2.4 - added CSS class parameters
 2.5 - added support for NSM Addon Updater (http://github.com/newism/nsm.addon_updater.ee_addon)
 2.6 - class attribute only added to code if class parameters are provided
+2.7 - bug fix: got rid of rogue slashes in rel=nofollow
 
 =====================================================
 
@@ -36,7 +37,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 $plugin_info = array(
 						'pi_name'			=> 'RogEE Tweetify',
-						'pi_version'		=> '2.6.1',
+						'pi_version'		=> '2.7',
 						'pi_author'			=> 'Michael Rog',
 						'pi_author_url'		=> 'http://michaelrog.com/go/ee',
 						'pi_description'	=> 'Formats @shoutouts, #hashtags, and URLs as links, a la Twitter.',
