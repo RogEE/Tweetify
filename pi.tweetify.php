@@ -6,7 +6,7 @@
 RogEE "Tweetify"
 a plug-in for ExpressionEngine 2
 by Michael Rog
-v2.6
+v2.6.1
 
 inspired by (and pretty much directly ripped from) the Javascript "ify" version
 by Dustin Diaz
@@ -36,7 +36,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 $plugin_info = array(
 						'pi_name'			=> 'RogEE Tweetify',
-						'pi_version'		=> '2.6',
+						'pi_version'		=> '2.6.1',
 						'pi_author'			=> 'Michael Rog',
 						'pi_author_url'		=> 'http://michaelrog.com/go/ee',
 						'pi_description'	=> 'Formats @shoutouts, #hashtags, and URLs as links, a la Twitter.',
@@ -89,7 +89,7 @@ var $return_data = "";
     	break ;        
     }
         
-    $links = preg_replace('`(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))`si', '<a href="$1"'.(empty($classString)?"":' class="'.$classString.'"').' rel=\"nofollow\">$1</a>', $str_url);    
+    $links = preg_replace('`(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))`si', '<a href="$1"'.(empty($classString)?"":' class="'.$classString.'"').' rel="nofollow">$1</a>', $str_url);    
 	
 	return preg_replace('[href=\"www.]','href="http://www.',$links);
 
