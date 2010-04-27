@@ -59,7 +59,7 @@
                 </ul>
             ]]>
             </description>
-            <enclosure url="http://bitbucket.org/rogee/rogee-tweetify/downloads/RogEE-Tweetify-v27.zip" type="application/zip" />
+            <enclosure url="http://bitbucket.org/rogee/tweetify/get/2.7.zip" type="application/zip" />
          </item>
     </channel>
 </rss>
