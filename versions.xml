@@ -45,7 +45,7 @@
                 </ul>
             ]]>
             </description>
-            <enclosure url="http://bitbucket.org/rogee/rogee-tweetify/downloads/RogEE-Tweetify-v26.zip" type="application/zip" />
+            <enclosure url="http://michaelrog.com/go/ee/Tweetify/RogEE-Tweetify-v26.zip" type="application/zip" />
          </item>
         <item>
             <title>Version 2.7</title>
@@ -59,7 +59,7 @@
                 </ul>
             ]]>
             </description>
-            <enclosure url="http://bitbucket.org/rogee/rogee-tweetify/downloads/RogEE-Tweetify-v27.zip" type="application/zip" />
+            <enclosure url="http://bitbucket.org/rogee/rogee-tweetify/get/2.7.zip" type="application/zip" />
          </item>
     </channel>
 </rss>
