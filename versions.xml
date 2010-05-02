@@ -66,7 +66,7 @@
             <!-- Additional tag required for NSM Addon Updater -->
             <ee_addon:version>2.8</ee_addon:version>
             <link>http://michaelrog.com/go/ee/</link>
-            <pubDate>Friday, 09 Apr 2010 14:24:00 +0000</pubDate>
+            <pubDate>Friday, 02 May 2010 16:40:00 +0000</pubDate>
             <description><![CDATA[
                 <ul>
                     <li>better (more Twitter-like) regex for @ and # links</li>

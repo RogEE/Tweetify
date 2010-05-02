@@ -173,7 +173,7 @@ class Tweetify {
 				break ; 
 		}
 
-		return preg_replace("#(^|[\W\w])#(\w+)#ise", "'\\1<a href=\"http://twitter.com/search?q=%23\\2\"".(empty($classString)?"":' class="'.$classString.'"').">#\\2</a>'", $str_tag);
+		return preg_replace("#(^|[\W\w])\#(\w+)#ise", "'\\1<a href=\"http://twitter.com/search?q=%23\\2\"".(empty($classString)?"":' class="'.$classString.'"').">#\\2</a>'", $str_tag);
 
 	} // END hash()
 
