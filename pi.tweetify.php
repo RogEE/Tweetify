@@ -6,7 +6,7 @@
 RogEE "Tweetify"
 a plug-in for ExpressionEngine 2
 by Michael Rog
-v2.7
+v2.8
 
 Inspired by Javascript "ify" by Dustin Diaz:
 >> http://www.dustindiaz.com/basement/ify.html
@@ -30,6 +30,7 @@ Changelog:
 2.5 - added support for NSM Addon Updater (http://github.com/newism/nsm.addon_updater.ee_addon)
 2.6 - class attribute only added to code if class parameters are provided
 2.7 - bug fix: got rid of rogue slashes in rel=nofollow
+2.8 - better (more Twitter-like) regex for @ and # links
 
 =====================================================
 
@@ -39,7 +40,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 $plugin_info = array(
 						'pi_name'			=> 'RogEE Tweetify',
-						'pi_version'		=> '2.7',
+						'pi_version'		=> '2.8',
 						'pi_author'			=> 'Michael Rog',
 						'pi_author_url'		=> 'http://michaelrog.com/go/ee',
 						'pi_description'	=> 'Formats @shoutouts, #hashtags, and URLs as links, a la Twitter.',
@@ -137,8 +138,9 @@ class Tweetify {
 				$classString = "" ;
 				break ; 
 		}
-
-		return preg_replace("#(^|[\n ])@([^ \"\t\n\r<]*)#ise", "'\\1<a href=\"http://www.twitter.com/\\2\"".(empty($classString)?"":' class="'.$classString.'"').">@\\2</a>'", $str_user);
+		
+		return preg_replace("#(^|\W)@(\w{1,20})#ise", "'\\1<a href=\"http://www.twitter.com/\\2\"".(empty($classString)?"":' class="'.$classString.'"').">@\\2</a>'", $str_user);
+		
 
 	} // END at()
 
@@ -171,7 +173,7 @@ class Tweetify {
 				break ; 
 		}
 
-		return preg_replace("#(^|[\n ])\#([^ \"\t\n\r<]*)#ise", "'\\1<a href=\"http://twitter.com/search?q=%23\\2\"".(empty($classString)?"":' class="'.$classString.'"').">#\\2</a>'", $str_tag);
+		return preg_replace("#(^|[\W\w])#(\w+)#ise", "'\\1<a href=\"http://twitter.com/search?q=%23\\2\"".(empty($classString)?"":' class="'.$classString.'"').">#\\2</a>'", $str_tag);
 
 	} // END hash()
 

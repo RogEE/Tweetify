@@ -4,7 +4,7 @@
         <title>RogEE Tweetify plugin changelog</title>
         <link>http://michaelrog.com/go/ee/</link>
         <description>Most recent changes to RogEE Wikibits, with links to updates.</description>
-        <item>
+		<item>
             <title>Version 2.4</title>
             <!-- Additional tag required for NSM Addon Updater -->
             <ee_addon:version>2.4</ee_addon:version>
@@ -17,8 +17,8 @@
             ]]>
             </description>
             <enclosure url="http://michaelrog.com/go/ee/Tweetify/RogEE-Tweetify-v24.zip" type="application/zip" />
-         </item>
-        <item>
+		</item>
+		<item>
             <title>Version 2.5</title>
             <!-- Additional tag required for NSM Addon Updater -->
             <ee_addon:version>2.5</ee_addon:version>
@@ -31,8 +31,8 @@
             ]]>
             </description>
             <enclosure url="http://michaelrog.com/go/ee/Tweetify/RogEE-Tweetify-v25.zip" type="application/zip" />
-         </item>
-        <item>
+		</item>
+		<item>
             <title>Version 2.6</title>
             <!-- Additional tag required for NSM Addon Updater -->
             <ee_addon:version>2.6</ee_addon:version>
@@ -46,8 +46,8 @@
             ]]>
             </description>
             <enclosure url="http://michaelrog.com/go/ee/Tweetify/RogEE-Tweetify-v26.zip" type="application/zip" />
-         </item>
-        <item>
+		</item>
+		<item>
             <title>Version 2.7</title>
             <!-- Additional tag required for NSM Addon Updater -->
             <ee_addon:version>2.7</ee_addon:version>
@@ -56,6 +56,20 @@
             <description><![CDATA[
                 <ul>
                     <li>bug fix: Got rid of rogue slashes in rel=/"nofollow/"</li>
+                </ul>
+            ]]>
+            </description>
+            <enclosure url="http://bitbucket.org/rogee/tweetify/get/2.7.zip" type="application/zip" />
+		</item>
+		<item>
+            <title>Version 2.8</title>
+            <!-- Additional tag required for NSM Addon Updater -->
+            <ee_addon:version>2.8</ee_addon:version>
+            <link>http://michaelrog.com/go/ee/</link>
+            <pubDate>Friday, 09 Apr 2010 14:24:00 +0000</pubDate>
+            <description><![CDATA[
+                <ul>
+                    <li>better (more Twitter-like) regex for @ and # links</li>
                 </ul>
             ]]>
             </description>
