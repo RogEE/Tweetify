@@ -70,7 +70,8 @@
 			<description><![CDATA[
 				<ul>
 					<li>Better (more Twitter-like) regex for @ and # links</li>
-					<li>No longer ignores text bordering HTML entities.</li>
+					<li>No longer ignores strings bordering HTML entities</li>
+					<li>Moved "@" sign outside of link text, like Twitter</li>
 				</ul>
 			]]>
 			</description>
