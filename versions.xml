@@ -1,79 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:ee_addon="http://expressionengine-addons.com/nsm_addon_updater/#rss-xml">
-    <channel>
-        <title>RogEE Tweetify plugin changelog</title>
-        <link>http://michaelrog.com/go/ee/</link>
-        <description>Most recent changes to RogEE Wikibits, with links to updates.</description>
+	<channel>
+		<title>RogEE Tweetify plugin changelog</title>
+		<link>http://michaelrog.com/go/ee/</link>
+		<description>Most recent changes to RogEE Wikibits, with links to updates.</description>
 		<item>
-            <title>Version 2.4</title>
-            <!-- Additional tag required for NSM Addon Updater -->
-            <ee_addon:version>2.4</ee_addon:version>
-            <link>http://michaelrog.com/go/ee/</link>
-            <pubDate>Tue, 23 Mar 2010 11:11:11 +0000</pubDate>
-            <description><![CDATA[
-                <ul>
-                    <li>added CSS class parameters</li>
-                </ul>
-            ]]>
-            </description>
-            <enclosure url="http://michaelrog.com/go/ee/Tweetify/RogEE-Tweetify-v24.zip" type="application/zip" />
+			<title>Version 2.4</title>
+			<!-- Additional tag required for NSM Addon Updater -->
+			<ee_addon:version>2.4</ee_addon:version>
+			<link>http://michaelrog.com/go/ee/</link>
+			<pubDate>Tue, 23 Mar 2010 11:11:11 +0000</pubDate>
+			<description><![CDATA[
+				<ul>
+					<li>added CSS class parameters</li>
+				</ul>
+			]]>
+			</description>
+			<enclosure url="http://michaelrog.com/go/ee/Tweetify/RogEE-Tweetify-v24.zip" type="application/zip" />
 		</item>
 		<item>
-            <title>Version 2.5</title>
-            <!-- Additional tag required for NSM Addon Updater -->
-            <ee_addon:version>2.5</ee_addon:version>
-            <link>http://michaelrog.com/go/ee/</link>
-            <pubDate>Sun, 04 Apr 2010 11:11:11 +0000</pubDate>
-            <description><![CDATA[
-                <ul>
-                    <li>Added support for NSM Addon Updater (http://github.com/newism/nsm.addon_updater.ee_addon)</li>
-                </ul>
-            ]]>
-            </description>
-            <enclosure url="http://michaelrog.com/go/ee/Tweetify/RogEE-Tweetify-v25.zip" type="application/zip" />
+			<title>Version 2.5</title>
+			<!-- Additional tag required for NSM Addon Updater -->
+			<ee_addon:version>2.5</ee_addon:version>
+			<link>http://michaelrog.com/go/ee/</link>
+			<pubDate>Sun, 04 Apr 2010 11:11:11 +0000</pubDate>
+			<description><![CDATA[
+				<ul>
+					<li>Added support for NSM Addon Updater (http://github.com/newism/nsm.addon_updater.ee_addon)</li>
+				</ul>
+			]]>
+			</description>
+			<enclosure url="http://michaelrog.com/go/ee/Tweetify/RogEE-Tweetify-v25.zip" type="application/zip" />
 		</item>
 		<item>
-            <title>Version 2.6</title>
-            <!-- Additional tag required for NSM Addon Updater -->
-            <ee_addon:version>2.6</ee_addon:version>
-            <link>http://michaelrog.com/go/ee/</link>
-            <pubDate>Mon, 05 Apr 2010 15:10:00 +0000</pubDate>
-            <description><![CDATA[
-                <ul>
-                    <li>Class string defaults to blank by default (if no class parameter is provided).</li>
-                    <li>The class attribute is only added to links if it is not blank.</li>
-                </ul>
-            ]]>
-            </description>
-            <enclosure url="http://michaelrog.com/go/ee/Tweetify/RogEE-Tweetify-v26.zip" type="application/zip" />
+			<title>Version 2.6</title>
+			<!-- Additional tag required for NSM Addon Updater -->
+			<ee_addon:version>2.6</ee_addon:version>
+			<link>http://michaelrog.com/go/ee/</link>
+			<pubDate>Mon, 05 Apr 2010 15:10:00 -0500</pubDate>
+			<description><![CDATA[
+				<ul>
+					<li>Class string defaults to blank by default (if no class parameter is provided).</li>
+					<li>The class attribute is only added to links if it is not blank.</li>
+				</ul>
+			]]>
+			</description>
+			<enclosure url="http://michaelrog.com/go/ee/Tweetify/RogEE-Tweetify-v26.zip" type="application/zip" />
 		</item>
 		<item>
-            <title>Version 2.7</title>
-            <!-- Additional tag required for NSM Addon Updater -->
-            <ee_addon:version>2.7</ee_addon:version>
-            <link>http://michaelrog.com/go/ee/</link>
-            <pubDate>Friday, 09 Apr 2010 14:24:00 +0000</pubDate>
-            <description><![CDATA[
-                <ul>
-                    <li>bug fix: Got rid of rogue slashes in rel=/"nofollow/"</li>
-                </ul>
-            ]]>
-            </description>
-            <enclosure url="http://bitbucket.org/rogee/tweetify/get/2.7.zip" type="application/zip" />
+			<title>Version 2.7</title>
+			<!-- Additional tag required for NSM Addon Updater -->
+			<ee_addon:version>2.7</ee_addon:version>
+			<link>http://michaelrog.com/go/ee/</link>
+			<pubDate>Friday, 09 Apr 2010 14:24:00 -0500</pubDate>
+			<description><![CDATA[
+				<ul>
+					<li>bug fix: Got rid of rogue slashes in rel=/"nofollow/"</li>
+				</ul>
+			]]>
+			</description>
+			<enclosure url="http://bitbucket.org/rogee/tweetify/get/2.7.zip" type="application/zip" />
 		</item>
 		<item>
-            <title>Version 2.8</title>
-            <!-- Additional tag required for NSM Addon Updater -->
-            <ee_addon:version>2.8</ee_addon:version>
-            <link>http://michaelrog.com/go/ee/</link>
-            <pubDate>Friday, 02 May 2010 16:40:00 +0000</pubDate>
-            <description><![CDATA[
-                <ul>
-                    <li>better (more Twitter-like) regex for @ and # links</li>
-                </ul>
-            ]]>
-            </description>
-            <enclosure url="http://bitbucket.org/rogee/tweetify/get/2.8.zip" type="application/zip" />
-         </item>
-    </channel>
+			<title>Version 2.8</title>
+			<!-- Additional tag required for NSM Addon Updater -->
+			<ee_addon:version>2.8</ee_addon:version>
+			<link>http://michaelrog.com/go/ee/</link>
+			<pubDate>Friday, 02 May 2010 16:40:00 -0500</pubDate>
+			<description><![CDATA[
+				<ul>
+					<li>Better (more Twitter-like) regex for @ and # links</li>
+					<li>No longer ignores text bordering HTML entities.</li>
+				</ul>
+			]]>
+			</description>
+			<enclosure url="http://bitbucket.org/rogee/tweetify/get/2.8.zip" type="application/zip" />
+ 		</item>
+	</channel>
 </rss>
