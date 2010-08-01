@@ -6,7 +6,7 @@
 RogEE "Tweetify"
 a plug-in for ExpressionEngine 2
 by Michael Rog
-v2.8
+v2.9
 
 Inspired by Javascript "ify" by Dustin Diaz:
 >> http://www.dustindiaz.com/basement/ify.html
@@ -16,6 +16,7 @@ Uses John Gruber's URL-matching regex:
 
 Please e-mail me with questions, feedback, suggestions, bugs, etc.
 >> michael@michaelrog.com
+>> http://michaelrog.com/ee
 
 This plugin is compatible with NSM Addon Updater:
 >> http://github.com/newism/nsm.addon_updater.ee_addon
@@ -31,18 +32,19 @@ Changelog:
 2.6 - class attribute only added to code if class parameters are provided
 2.7 - bug fix: got rid of rogue slashes in rel=nofollow
 2.8 - better (more Twitter-like) regex for @ and # links
+2.9 - updated documentation and doc links
 
 =====================================================
 
 */
 
-if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+if (! defined('BASEPATH') && ! defined('EXT')) exit('No direct script access allowed');
 
 $plugin_info = array(
 						'pi_name'			=> 'RogEE Tweetify',
-						'pi_version'		=> '2.8',
+						'pi_version'		=> '2.9',
 						'pi_author'			=> 'Michael Rog',
-						'pi_author_url'		=> 'http://michaelrog.com/go/ee',
+						'pi_author_url'		=> 'http://michaelrog.com/ee',
 						'pi_description'	=> 'Formats @shoutouts, #hashtags, and URLs as links, a la Twitter.',
 						'pi_usage'			=> Tweetify::usage()
 					);

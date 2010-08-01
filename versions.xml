@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:ee_addon="http://expressionengine-addons.com/nsm_addon_updater/#rss-xml">
 	<channel>
 		<title>RogEE Tweetify plugin changelog</title>
-		<link>http://michaelrog.com/go/ee/</link>
+		<link>http://michaelrog.com/ee/</link>
 		<description>Most recent changes to RogEE Wikibits, with links to updates.</description>
 		<item>
 			<title>Version 2.4</title>
@@ -51,7 +51,7 @@
 			<title>Version 2.7</title>
 			<!-- Additional tag required for NSM Addon Updater -->
 			<ee_addon:version>2.7</ee_addon:version>
-			<link>http://michaelrog.com/go/ee/</link>
+			<link>http://michaelrog.com/ee/tweetify</link>
 			<pubDate>Friday, 09 Apr 2010 14:24:00 -0500</pubDate>
 			<description><![CDATA[
 				<ul>
@@ -65,7 +65,7 @@
 			<title>Version 2.8</title>
 			<!-- Additional tag required for NSM Addon Updater -->
 			<ee_addon:version>2.8</ee_addon:version>
-			<link>http://michaelrog.com/go/ee/</link>
+			<link>http://michaelrog.com/ee/tweetify</link>
 			<pubDate>Friday, 02 May 2010 16:40:00 -0500</pubDate>
 			<description><![CDATA[
 				<ul>
@@ -77,5 +77,20 @@
 			</description>
 			<enclosure url="http://bitbucket.org/rogee/tweetify/get/2.8.zip" type="application/zip" />
  		</item>
+		<item>
+			<title>Version 2.9</title>
+			<!-- Additional tag required for NSM Addon Updater -->
+			<ee_addon:version>2.9</ee_addon:version>
+			<link>http://michaelrog.com/ee/tweetify</link>
+			<pubDate>Sunday, 01 Aug 2010 17:13:00 -0500</pubDate>
+			<description><![CDATA[
+				<ul>
+					<li>updated documentation</li>
+					<li>updated links to <a href="http://michaelrog.com/ee/tweetify">docs</a></li>
+				</ul>
+			]]>
+			</description>
+			<enclosure url="http://bitbucket.org/rogee/tweetify/get/2.9.zip" type="application/zip" />
+ 		</item> 		
 	</channel>
 </rss>
