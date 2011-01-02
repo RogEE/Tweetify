@@ -33,6 +33,7 @@ Changelog:
 2.7 - bug fix: got rid of rogue slashes in rel=nofollow
 2.8 - better (more Twitter-like) regex for @ and # links
 2.9 - updated documentation and doc links
+3.0 - updated hash tag search URL to use search.twitter.com instead of twitter.com
 
 =====================================================
 
@@ -42,7 +43,7 @@ if (! defined('BASEPATH') && ! defined('EXT')) exit('No direct script access all
 
 $plugin_info = array(
 						'pi_name'			=> 'RogEE Tweetify',
-						'pi_version'		=> '2.9',
+						'pi_version'		=> '3.0',
 						'pi_author'			=> 'Michael Rog',
 						'pi_author_url'		=> 'http://michaelrog.com/ee',
 						'pi_description'	=> 'Formats @shoutouts, #hashtags, and URLs as links, a la Twitter.',
@@ -175,7 +176,7 @@ class Tweetify {
 				break ; 
 		}
 
-		return preg_replace("#(^|[\W\w])\#(\w+)#ise", "'\\1<a href=\"http://twitter.com/search?q=%23\\2\"".(empty($classString)?"":' class="'.$classString.'"').">#\\2</a>'", $str_tag);
+		return preg_replace("#(^|[\W\w])\#(\w+)#ise", "'\\1<a href=\"http://search.twitter.com/search?q=%23\\2\"".(empty($classString)?"":' class="'.$classString.'"').">#\\2</a>'", $str_tag);
 
 	} // END hash()
 
