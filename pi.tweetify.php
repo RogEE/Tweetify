@@ -6,7 +6,7 @@
 RogEE "Tweetify"
 a plug-in for ExpressionEngine 2
 by Michael Rog
-v2.9
+v3.0
 
 Inspired by Javascript "ify" by Dustin Diaz:
 >> http://www.dustindiaz.com/basement/ify.html
