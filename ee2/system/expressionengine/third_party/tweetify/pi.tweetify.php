@@ -6,7 +6,7 @@
 RogEE "Tweetify"
 a plug-in for ExpressionEngine 2
 by Michael Rog
-v3.0
+v3.0.1
 
 Inspired by Javascript "ify" by Dustin Diaz:
 >> http://www.dustindiaz.com/basement/ify.html
@@ -16,7 +16,7 @@ Uses John Gruber's URL-matching regex:
 
 Please e-mail me with questions, feedback, suggestions, bugs, etc.
 >> michael@michaelrog.com
->> http://michaelrog.com/ee
+>> http://rog.ee
 
 This plugin is compatible with NSM Addon Updater:
 >> http://github.com/newism/nsm.addon_updater.ee_addon
@@ -43,9 +43,9 @@ if (! defined('BASEPATH') && ! defined('EXT')) exit('No direct script access all
 
 $plugin_info = array(
 						'pi_name'			=> 'RogEE Tweetify',
-						'pi_version'		=> '3.0',
+						'pi_version'		=> '3.0.1',
 						'pi_author'			=> 'Michael Rog',
-						'pi_author_url'		=> 'http://michaelrog.com/ee',
+						'pi_author_url'		=> 'http://rog.ee',
 						'pi_description'	=> 'Formats @shoutouts, #hashtags, and URLs as links, a la Twitter.',
 						'pi_usage'			=> Tweetify::usage()
 					);
