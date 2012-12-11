@@ -142,8 +142,7 @@ class Tweetify {
 				break ; 
 		}
 		
-		return preg_replace("#(^|\W)@(\w{1,20})#ise", "'\\1@<a href=\"http://www.twitter.com/\\2\"".(empty($classString)?"":' class="'.$classString.'"').">\\2</a>'", $str_user);
-		
+		return stripslashes(preg_replace("#(^|\W)@(\w{1,20})#ise", "'\\1@<a href=\"http://www.twitter.com/\\2\"".(empty($classString)?"":' class="'.$classString.'"').">\\2</a>'", $str_user));
 
 	} // END at()
 
