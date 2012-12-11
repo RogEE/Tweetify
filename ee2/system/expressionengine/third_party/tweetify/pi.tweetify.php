@@ -6,7 +6,7 @@
 RogEE "Tweetify"
 a plug-in for ExpressionEngine 2
 by Michael Rog
-v3.0.1
+v3.1
 
 Inspired by Javascript "ify" by Dustin Diaz:
 >> http://www.dustindiaz.com/basement/ify.html
@@ -34,6 +34,7 @@ Changelog:
 2.8 - better (more Twitter-like) regex for @ and # links
 2.9 - updated documentation and doc links
 3.0 - updated hash tag search URL to use search.twitter.com instead of twitter.com
+3.1 - eliminated leading slash when @handle is preceded by quotes
 
 =====================================================
 
@@ -43,7 +44,7 @@ if (! defined('BASEPATH') && ! defined('EXT')) exit('No direct script access all
 
 $plugin_info = array(
 						'pi_name'			=> 'RogEE Tweetify',
-						'pi_version'		=> '3.0.1',
+						'pi_version'		=> '3.1.0',
 						'pi_author'			=> 'Michael Rog',
 						'pi_author_url'		=> 'http://rog.ee',
 						'pi_description'	=> 'Formats @shoutouts, #hashtags, and URLs as links, a la Twitter.',
