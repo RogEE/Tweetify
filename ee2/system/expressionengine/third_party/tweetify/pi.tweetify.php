@@ -44,7 +44,7 @@ Changelog:
 if (! defined('BASEPATH') && ! defined('EXT')) exit('No direct script access allowed');
 
 $plugin_info = array(
-						'pi_name'			=> 'RogEE Tweetify',
+						'pi_name'			=> 'Tweetify [RogEE]',
 						'pi_version'		=> '3.2.0',
 						'pi_author'			=> 'Michael Rog',
 						'pi_author_url'		=> 'http://rog.ee',
@@ -106,7 +106,7 @@ class Tweetify {
 				break;
 			default:
 				$classString = "" ;
-				break ;        
+				break;
 		}
 		
 		$links = preg_replace('`(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))`si', '<a href="$1"'.(empty($classString)?"":' class="'.$classString.'"').' rel="nofollow">$1</a>', $str_url);    
@@ -138,10 +138,10 @@ class Tweetify {
 				break;
 			case (!empty($this->css)) :
 				$classString = trim($this->css);
-				break;        
+				break;
 			default:
 				$classString = "" ;
-				break ; 
+				break;
 		}
 		
 		return stripslashes(preg_replace("#(^|\W)@(\w{1,20})#ise", "'\\1@<a href=\"http://www.twitter.com/\\2\"".(empty($classString)?"":' class="'.$classString.'"').">\\2</a>'", $str_user));
@@ -171,10 +171,10 @@ class Tweetify {
 				break;
 			case (!empty($this->css)) :
 				$classString = trim($this->css);
-				break;        
+				break;
 			default:
 				$classString = "" ;
-				break ; 
+				break;
 		}
 
 		return preg_replace("#(^|[\W])(?<!\&)\#(\w+)#ise", "'\\1<a href=\"http://search.twitter.com/search?q=%23\\2\"".(empty($classString)?"":' class="'.$classString.'"').">#\\2</a>'", $str_tag);
