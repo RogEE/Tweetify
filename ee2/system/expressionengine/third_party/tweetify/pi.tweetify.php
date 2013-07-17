@@ -6,7 +6,7 @@
 RogEE "Tweetify"
 a plug-in for ExpressionEngine 2
 by Michael Rog
-v3.2
+v3.3
 
 Inspired by Javascript "ify" by Dustin Diaz:
 >> http://www.dustindiaz.com/basement/ify.html
@@ -36,6 +36,7 @@ Changelog:
 3.0 - updated hash tag search URL to use search.twitter.com instead of twitter.com
 3.1 - eliminated leading slash when @handle is preceded by quotes
 3.2 - updated hashtag regex to ignore HTML entity codes
+3.3 - [Steven Langbroek] updated hashtag-links to APIv1.1
 
 =====================================================
 
@@ -45,7 +46,7 @@ if (! defined('BASEPATH') && ! defined('EXT')) exit('No direct script access all
 
 $plugin_info = array(
 						'pi_name'			=> 'Tweetify [RogEE]',
-						'pi_version'		=> '3.2.0',
+						'pi_version'		=> '3.3.0',
 						'pi_author'			=> 'Michael Rog',
 						'pi_author_url'		=> 'http://rog.ee',
 						'pi_description'	=> 'Formats @shoutouts, #hashtags, and URLs as links, a la Twitter.',
@@ -177,7 +178,7 @@ class Tweetify {
 				break;
 		}
 
-		return preg_replace("#(^|[\W])(?<!\&)\#(\w+)#ise", "'\\1<a href=\"http://search.twitter.com/search?q=%23\\2\"".(empty($classString)?"":' class="'.$classString.'"').">#\\2</a>'", $str_tag);
+		return preg_replace("#(^|[\W])(?<!\&)\#(\w+)#ise", "'\\1<a href=\"https://twitter.com/search?q=%23\\2\"".(empty($classString)?"":' class="'.$classString.'"').">#\\2</a>'", $str_tag);
 
 	} // END hash()
 
@@ -200,7 +201,7 @@ class Tweetify {
 		
 		AFTER:
 		
-		<a href="http://twitter.com/michaelrog">@michaelrog</a> check this out: <a href="http://www.zombo.com/">http://www.zombo.com/</a> <a href="http://search.twitter.com/search?q=%23lolz">#lolz</a>
+		<a href="http://twitter.com/michaelrog">@michaelrog</a> check this out: <a href="http://www.zombo.com/">http://www.zombo.com/</a> <a href="https://twitter.com/search?q=%23lolz">#lolz</a>
 	
 	
 		2. Or, use the individual functions:
